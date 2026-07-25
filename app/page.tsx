@@ -1,7 +1,7 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Project from "@/components/Project";
+import ProjectsSection from "@/components/ProjectsSection";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <About />
-      <Project />
+      <ProjectsSection />
       <Contact />
     </main>
   );
