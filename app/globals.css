@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ---- Design tokens ---- */
+  /* Edit these 6 values to reskin the entire site */
+  --color-ink: #0a0e14;        /* page background */
+  --color-surface: #10151d;    /* card / panel background */
+  --color-surface-2: #161c26;  /* raised panel (terminal, tags) */
+  --color-line: #232a35;       /* hairline borders */
+  --color-text: #e8eaed;       /* primary text */
+  --color-muted: #8b94a3;      /* secondary text */
+  --color-amber: #ffb454;      /* primary accent (CTAs, highlights) */
+  --color-teal: #5fd4c4;       /* secondary accent (tags, links) */
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  background-color: var(--color-ink);
+  color: var(--color-text);
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: var(--color-amber);
+  color: var(--color-ink);
+}
+
+/* Visible keyboard focus for accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-amber);
+  outline-offset: 3px;
+}
