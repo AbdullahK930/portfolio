@@ -68,4 +68,32 @@ export const PROJECTS: ProjectData[] = [
       },
     ],
   },
+  {
+    title: "Inbox Triage",
+    tagline:
+      "Paste a customer support message, get back its priority, category, and a drafted reply — ready to edit and send.",
+    screenshot: "/inbox-triage-demo.png",
+    screenshotAlt: "Inbox Triage showing a medium-priority billing ticket",
+    stack: ["Next.js", "TypeScript", "Google Gemini API", "Tailwind CSS"],
+    liveUrl: "https://inbox-triage-fawn.vercel.app", // EDIT if the URL changes
+    repoUrl: "https://github.com/AbdullahK930/inbox-triage", // EDIT: confirm this matches your actual repo name
+    sections: [
+      {
+        label: "Problem",
+        body: "Support teams (or solo founders handling their own inbox) lose real time deciding what to answer first and drafting replies from scratch for repetitive, predictable request types.",
+      },
+      {
+        label: "Approach",
+        body: "A user pastes in a raw customer message. The backend sends it to an AI model constrained to return only structured JSON — a priority level (urgent/medium/low), a category, a one-sentence summary, and a drafted reply — never free-form text. The result renders as a ticket card with a color-coded priority edge, mirroring real-world triage color conventions, with the reply left editable before copying.",
+      },
+      {
+        label: "Challenges",
+        body: "The real risk with an AI-drafted reply is confident-sounding fabrication — inventing an account detail, a refund promise, or a timeline the business can't actually guarantee. I explicitly instructed the model to stay generically helpful rather than specific whenever it can't verify a detail, and kept a human-edit step before anything gets sent rather than treating the draft as final.",
+      },
+      {
+        label: "Result",
+        body: "Correctly distinguishes urgency across genuinely different message types — an angry, time-critical account-lockout message is flagged urgent with an appropriately empathetic reply, while a casual feature request is flagged low priority with a lighter tone.",
+      },
+    ],
+  },
 ];
