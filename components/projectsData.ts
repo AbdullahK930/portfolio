@@ -96,4 +96,32 @@ export const PROJECTS: ProjectData[] = [
       },
     ],
   },
+  {
+    title: "Pulse — Analytics Dashboard",
+    tagline:
+      "A SaaS analytics dashboard: revenue trends, active users, churn, and signups by channel, with a live time-range filter.",
+    screenshot: "/pulse-dashboard-demo.png",
+    screenshotAlt: "Pulse dashboard showing revenue, users, and churn metrics",
+    stack: ["Next.js", "TypeScript", "Recharts", "Tailwind CSS"],
+    liveUrl: "https://saas-dashboard-one-sandy.vercel.app", // EDIT if the URL changes
+    repoUrl: "https://github.com/AbdullahK930/saas-dashboard", // EDIT: confirm this matches your actual repo name
+    sections: [
+      {
+        label: "Problem",
+        body: "Founders and small teams running a SaaS product need a fast, honest read on how the business is doing — revenue direction, user growth, churn, and where new customers are coming from — without digging through raw spreadsheets or database queries.",
+      },
+      {
+        label: "Approach",
+        body: "A single-page dashboard with four headline metric cards, each showing its recent trend as a small embedded sparkline, plus a revenue trend chart, a signups-by-channel breakdown, and a recent-customers table. A time-range toggle (7 days / 30 days / 90 days / 12 months) updates every chart and number together, so the whole view always represents one consistent window of time.",
+      },
+      {
+        label: "Challenges",
+        body: "Getting the numbers to look and feel realistic — trending in a believable direction with natural noise, not a flat straight line — while keeping every value fully deterministic. Next.js renders once on the server and once in the browser, so anything based on real randomness produces two different results and throws a hydration error; I built a small seeded number generator instead, which always produces identical output on both sides.",
+      },
+      {
+        label: "Result",
+        body: "A clean, interactive dashboard demonstrating dashboard layout, data visualization, and filtering interaction — the exact kind of interface small SaaS products commonly need built for their own internal or customer-facing analytics.",
+      },
+    ],
+  },
 ];
