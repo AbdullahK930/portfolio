@@ -124,4 +124,32 @@ export const PROJECTS: ProjectData[] = [
       },
     ],
   },
+  {
+    title: "Hookline — HTTP Request Inspector",
+    tagline:
+      "Get a unique URL, send it any HTTP request, and watch it appear live — method, headers, query params, and body, all inspectable.",
+    screenshot: "/hookline-demo.png",
+    screenshotAlt: "Hookline landing page with the Create an endpoint button",
+    stack: ["Next.js", "TypeScript", "Upstash Redis", "Tailwind CSS"],
+    liveUrl: "https://webhook-inspector-six.vercel.app", // EDIT if the URL changes
+    repoUrl: "https://github.com/AbdullahK930/webhook-inspector", // EDIT: confirm this matches your actual repo name
+    sections: [
+      {
+        label: "Problem",
+        body: "When integrating a webhook (Stripe, GitHub, a payment provider, anything), developers routinely need to see exactly what a third-party service actually sends — real headers, real body, real timing — rather than guessing from documentation.",
+      },
+      {
+        label: "Approach",
+        body: "A user generates a unique endpoint URL. Any HTTP request sent to it — any method, any headers, any body — is captured server-side and written to a Redis-backed log, capped at 50 entries per endpoint with a 24-hour expiry. A separate page polls that log every few seconds and renders each request as an expandable card, with HTTP methods color-coded the same way tools like Postman do.",
+      },
+      {
+        label: "Challenges",
+        body: "This is the one project in the set with a real, persistent backend rather than a single stateless AI call. Two things needed care: keeping the 'receive a request' endpoint and the 'read the log' endpoint fully separate, so a legitimate GET request being tested doesn't collide with the frontend's own polling; and treating this as a genuinely public tool — capped storage, an expiry window, and a visible on-page warning not to send real secrets to it.",
+      },
+      {
+        label: "Result",
+        body: "Correctly captures and displays real request data end-to-end — verified with both a plain GET (browser visit) and a POST with a JSON body via curl, both appearing in the live feed within seconds, headers and body intact.",
+      },
+    ],
+  },
 ];
