@@ -125,6 +125,34 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
+    title: "Safeer Suiting",
+    tagline:
+      "A dark, editorial marketing site for a bespoke tailoring house — heritage storytelling, a garment craftsmanship walkthrough, and a WhatsApp-native appointment booking flow.",
+    screenshot: "/safeer-suiting-demo.png",
+    screenshotAlt: "Safeer Suiting homepage hero — Timeless Elegance, Perfectly Tailored",
+    stack: ["Next.js", "TypeScript", "CSS Modules", "Lucide Icons"],
+    liveUrl: "", // EDIT: fill in after Vercel deploy
+    repoUrl: "https://github.com/AbdullahK930/Safeer-Suiting",
+    sections: [
+      {
+        label: "Problem",
+        body: "Safeer Suiting is a real bespoke tailoring house in Rawalpindi with decades of craftsmanship but no web presence that reflected it — no way for a prospective client to get a feel for the brand or book an appointment without a phone call.",
+      },
+      {
+        label: "Approach",
+        body: "A single-page marketing site built around heritage and craft: an animated hero, a heritage/anatomy-of-a-suit section breaking down construction details, a craftsmanship showcase, collections, testimonials, and a contact section with a real booking form. Submitting the form doesn't hit a backend — it formats the request and opens WhatsApp with the message pre-filled, so a customer's booking goes straight to the shop's existing WhatsApp number with zero new infrastructure to maintain.",
+      },
+      {
+        label: "Challenges",
+        body: "The site leans heavily on scroll-triggered reveal animations and a custom cursor across many distinct sections (hero, heritage, anatomy, craftsmanship, collections, testimonials, contact), so keeping animation timing and spacing consistent across sections — and fonts loading through next/font instead of a render-blocking Google Fonts import — took real iteration.",
+      },
+      {
+        label: "Result",
+        body: "A cohesive, on-brand site with a working booking flow that requires no backend or database — every appointment request arrives as a formatted WhatsApp message the shop already knows how to handle.",
+      },
+    ],
+  },
+  {
     title: "Hookline — HTTP Request Inspector",
     tagline:
       "Get a unique URL, send it any HTTP request, and watch it appear live — method, headers, query params, and body, all inspectable.",
