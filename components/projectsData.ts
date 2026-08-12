@@ -131,7 +131,7 @@ export const PROJECTS: ProjectData[] = [
     screenshot: "/safeer-suiting-demo.png",
     screenshotAlt: "Safeer Suiting homepage hero — Timeless Elegance, Perfectly Tailored",
     stack: ["Next.js", "TypeScript", "CSS Modules", "Lucide Icons"],
-    liveUrl: "", // EDIT: fill in after Vercel deploy
+    liveUrl: "https://safeer-suiting-one.vercel.app",
     repoUrl: "https://github.com/AbdullahK930/Safeer-Suiting",
     sections: [
       {
